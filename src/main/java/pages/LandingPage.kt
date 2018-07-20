@@ -2,6 +2,7 @@ package pages
 
 import Config
 import org.openqa.selenium.By
+import org.openqa.selenium.support.ui.ExpectedConditions
 
 class LandingPage : Common() {
     fun clickLogin() {
@@ -9,6 +10,7 @@ class LandingPage : Common() {
     }
 
     private fun fillUsernameAndPassword(username: String, password: String) {
+        webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(By.className("login-title")))
         val usernameBox = Config.driver.findElement(By.id("username"))
         val passwordBox = Config.driver.findElement(By.id("password"))
         usernameBox.clear()
@@ -17,7 +19,7 @@ class LandingPage : Common() {
         passwordBox.sendKeys(password)
     }
 
-    fun clickLoginButton() {
+    private fun clickLoginButton() {
         Config.driver.findElement(By.className("button1")).click()
     }
 
@@ -27,8 +29,8 @@ class LandingPage : Common() {
         clickLoginButton()
     }
 
-    fun getUsernameFromNavBar() {
-        Config.driver.findElement(By.xpath("//ul[@id='nav-main']//span[@class='username']")).text
+    fun getUsernameFromNavBar(): String {
+        return Config.driver.findElement(By.xpath("//ul[@id='nav-main']//span[@class='username']")).text
     }
 
     fun logoutVisible(): Boolean {

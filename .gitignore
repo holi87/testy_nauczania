@@ -9,6 +9,7 @@ buildNumber.properties
 .mvn/timing.properties
 .mvn/wrapper/maven-wrapper.jar
 ./main/java/cfg_att.kt
+*.html
 # Compiled class file
 *.class
 
