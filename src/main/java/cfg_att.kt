@@ -1,5 +1,5 @@
 object config {
     val username = ""
     val password = ""
-    val forumUrl = ""
+    val forumUrl = "1"
 }
