@@ -3,7 +3,7 @@ package pages
 import Config
 import org.openqa.selenium.support.ui.WebDriverWait
 
-class Common {
+open class Common {
     fun open(url: String) {
         Config.driver.get(url)
     }
