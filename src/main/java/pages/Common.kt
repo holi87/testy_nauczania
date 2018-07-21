@@ -15,6 +15,6 @@ open class Common {
 
     val webDriverWait = WebDriverWait(Config.driver, 15)
 
-    // do odkomentowania w razie potrzeb, chwilowo zbedne
+    //do odkomentowania w razie potrzeb, chwilowo zbedne
 //    val jsExecutorInBrowser = Config.driver as JavascriptExecutor
 }
