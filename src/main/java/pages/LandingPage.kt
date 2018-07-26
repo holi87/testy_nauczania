@@ -30,7 +30,7 @@ class LandingPage : Common() {
     }
 
     fun getUsernameFromNavBar(): String {
-        return Config.driver.findElement(By.xpath("//ul[@id='nav-main']//span[@class='username']")).text
+        return Config.driver.findElement(By.id("username_logged_in")).text
     }
 
     fun logoutVisible(): Boolean {
