@@ -2,7 +2,6 @@ package pages
 
 import Config
 import org.openqa.selenium.By
-import org.openqa.selenium.support.ui.ExpectedConditions
 
 class ForumPage : Common() {
     fun clickOnSubforumByName(subforumName: String) {
@@ -14,8 +13,5 @@ class ForumPage : Common() {
         }
     }
 
-    fun getActualSubforumName(): String {
-        webDriverWait.until(ExpectedConditions.urlContains("viewforum"))
-        return Config.driver.findElement(By.className("forum-title")).text
-    }
+
 }

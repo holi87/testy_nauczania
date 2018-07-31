@@ -1,6 +1,7 @@
 package pages
 
 import Config
+import net.bytebuddy.utility.RandomString
 import org.openqa.selenium.By
 import org.openqa.selenium.support.ui.ExpectedConditions
 import org.openqa.selenium.support.ui.WebDriverWait
@@ -67,6 +68,10 @@ open class Common {
 
     private fun clickDropdownListOnUsername() {
         Config.driver.findElement(By.id("username_logged_in")).click()
+    }
+
+    fun randomStringGenerator(numberOfChars: Int): String {
+        return RandomString.make(numberOfChars)
     }
 
     //do odkomentowania w razie potrzeb, chwilowo zbedne
